@@ -36,7 +36,7 @@ function createSnow() {
 }
 
 const loader = new THREE.GLTFLoader();
-loader.load('/festive_world_-_minecraft.glb', function (gltf) {
+loader.load('./festive_world_-_minecraft.glb', function (gltf) {
     scene.add(gltf.scene);
 
     const box = new THREE.Box3().setFromObject(gltf.scene);
@@ -59,7 +59,7 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 5);
 scene.add(directionalLight);
 
-const backgroundTexture = new THREE.TextureLoader().load('/background.png');
+const backgroundTexture = new THREE.TextureLoader().load('.//background.png');
 scene.background = backgroundTexture;
 
 function animate() {
